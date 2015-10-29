@@ -4,12 +4,21 @@
 using System;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Server.Kestrel;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNet.Hosting;
+using Microsoft.Dnx.Runtime;
+using Microsoft.Framework.DependencyInjection;
 
 namespace Benchmarks
 {
     public class Startup
     {
+    /*
+        public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
+        {
+		Console.WriteLine ("startup from appEnv");
+	}
+	*/
+	
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
